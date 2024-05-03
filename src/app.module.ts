@@ -7,6 +7,7 @@ import { ErrorFilter } from './common/filters/error.filter';
 import { AtGuard } from './common/guard';
 import { ArticleModule } from './article/article.module';
 import { MulterModule } from '@nestjs/platform-express';
+import { CommentModule } from './comment/comment.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { MulterModule } from '@nestjs/platform-express';
     PrismaModule,
     AuthModule,
     ArticleModule,
+    CommentModule,
   ],
   providers: [
     {

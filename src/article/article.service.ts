@@ -60,6 +60,7 @@ export class ArticleService {
     const article = await this.prismaService.article.findUnique({
       where: { id: articleId },
     });
+    if (!article) throw new NotFoundException('article not found');
     return article;
   }
 

@@ -92,7 +92,7 @@ export class ArticleController {
 
   @Public()
   @Get(':articleId')
-  getDetail(@Param('articleId') articleId: number) {
+  getDetail(@Param('articleId', ParseIntPipe) articleId: number) {
     return this.articleService.getDetail(articleId);
   }
 
